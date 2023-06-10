@@ -1,0 +1,23 @@
+server:
+  port: 8001
+
+spring:
+  application:
+    name: forum-service
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://127.0.0.1:3306/distriforum?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+
+snowflake:
+  worker-id: 1
+  datacenter-id: 1
